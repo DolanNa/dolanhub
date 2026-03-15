@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOLAN HUB | 오픈채팅, 그 은밀한 속삭임</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;700;900&display=swap');
+        :root { --main-indigo: #818cf8; }
+        body { font-family: 'Pretendard', sans-serif; background-color: #050505; color: #ffffff; scroll-behavior: smooth; overflow-x: hidden; }
+        .hero-bg { background: linear-gradient(to bottom, rgba(5,5,5,0.4), #050505), url('images/cover_main.jpg'); background-size: cover; background-position: center; }
+        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(25px); border: 1px solid rgba(255, 255, 255, 0.15); }
+        .glow-text { text-shadow: 0 0 30px rgba(255, 255, 255, 0.6); }
+        .line-loose { line-height: 2.1; }
+        .accent-indigo { color: #a5b4fc; }
+        .share-icon-btn { transition: all 0.3s ease; display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; }
+        .share-icon-btn:hover { transform: translateY(-3px); background-color: rgba(255,255,255,0.15); }
+        .ep-link { transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+        .ep-link:hover { border-color: var(--main-indigo); background: rgba(129, 140, 248, 0.1); transform: translateX(10px); }
+        .quote-card { border-left: 2px solid var(--main-indigo); padding-left: 24px; margin-bottom: 60px; }
+        #back-to-top { position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; background: var(--main-indigo); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 100; cursor: pointer; }
+        #back-to-top.show { opacity: 1; visibility: visible; }
+    </style>
+</head>
+<body style="background-color: #050505;">
+    <header class="h-screen flex items-center justify-center hero-bg relative">
+        <div class="text-center px-6 z-10" data-aos="fade-up" data-aos-duration="1500">
+            <p class="accent-indigo font-bold tracking-[0.5em] mb-6 text-sm uppercase">Dolan Universe Archive</p>
+            <h1 class="text-6xl md:text-9xl font-black mb-10 tracking-tighter glow-text leading-tight text-white uppercase italic">오픈채팅,<br><span class="accent-indigo">은밀한 속삭임</span></h1>
+            <p class="text-white text-xl md:text-2xl max-w-4xl mx-auto line-loose font-light mb-12">익명이라는 가면 뒤, 알림음 한 줄에 잠식당한<br>당신의 가장 위험한 접속</p>
+            <a href="#archive-read" class="bg-indigo-600 text-white px-14 py-5 rounded-full font-black text-xl shadow-[0_0_40px_rgba(129,140,248,0.5)] hover:bg-indigo-500 transition-all uppercase tracking-tighter">Enter the Archive</a>
+        </div>
+    </header>
+
+    <section class="py-44 px-6 max-w-6xl mx-auto overflow-hidden">
+        <div class="flex flex-col md:flex-row gap-20 items-center">
+            <div class="flex-1 order-2 md:order-1" data-aos="fade-right">
+                <span class="accent-indigo font-bold tracking-widest text-sm uppercase">Moment 0. Entering</span>
+                <h2 class="text-4xl md:text-5xl font-black mt-5 mb-8 italic text-white leading-tight tracking-tighter italic">"누나... 제가 지금 <br>어떤 기분인지 아세요?"</h2>
+                <p class="text-white text-lg line-loose font-light">건조한 일상에 던져진 30대 지오. 가벼운 유희를 기대하며 들어간 오픈채팅방에서 그녀를 마주한다. <br>그녀의 압도적인 주도권 아래, 지오의 이성은 무력하게 무너진다.</p>
+            </div>
+            <div class="flex-1 order-1 md:order-2" data-aos="fade-left">
+                <img src="images/cover_jio.jpg" alt="Jio" class="rounded-[3.5rem] shadow-2xl border border-white/10 transition-transform duration-1000 hover:scale-105">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-44 bg-zinc-950 px-6 overflow-hidden text-center">
+        <div class="max-w-4xl mx-auto" data-aos="zoom-in">
+            <div class="w-48 h-48 mx-auto mb-14 rounded-full overflow-hidden border-2 border-indigo-500 shadow-[0_0_40px_rgba(99,102,241,0.4)]">
+                <img src="images/cover_room.jpg" alt="Room" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-4xl md:text-6xl font-black italic mb-10 leading-snug text-white uppercase tracking-tighter">에잇. 한마디에 <br>모든 것이 뒤집혔다.</h3>
+            <p class="text-white text-xl opacity-90 font-light italic line-loose">빨강, 파랑, 보라로 흩뿌려지던 그 밤. 차가운 테이블 위에서 시작된, 관계의 완전한 전복.</p>
+        </div>
+    </section>
+
+    <section id="series" class="py-44 bg-black px-6">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-5xl font-black mb-6 text-white tracking-tighter uppercase" data-aos="fade-up">The Moments</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 text-left">
+                <div class="space-y-8" data-aos="fade-up" data-aos-delay="100">
+                    <img src="images/cover_extra1.jpg" class="rounded-[2.5rem] w-full h-[500px] object-cover shadow-2xl card-hover border border-white/10">
+                    <div class="px-2">
+                        <h4 class="text-xl font-bold mb-4 text-white italic tracking-tighter uppercase">01. 낯선 온기의 유혹</h4>
+                        <p class="text-white/60 line-loose font-light italic">"누나... 제 진심은요?" 30대의 결핍을 자극적으로 파고드는 교감.</p>
+                    </div>
+                </div>
+                <div class="space-y-8" data-aos="fade-up" data-aos-delay="300">
+                    <img src="images/cover_extra2.jpg" class="rounded-[2.5rem] w-full h-[500px] object-cover shadow-2xl card-hover border border-white/10">
+                    <div class="px-2">
+                        <h4 class="text-xl font-bold mb-4 text-white italic tracking-tighter uppercase">02. 관계의 전복</h4>
+                        <p class="text-white/60 line-loose font-light italic">지배의 눈빛으로 바뀌는 찰나의 서늘한 희열.</p>
+                    </div>
+                </div>
+                <div class="space-y-8" data-aos="fade-up" data-aos-delay="500">
+                    <img src="images/cover_extra3.jpg" class="rounded-[2.5rem] w-full h-[500px] object-cover shadow-2xl card-hover border border-white/10">
+                    <div class="px-2">
+                        <h4 class="text-xl font-bold mb-4 text-white italic tracking-tighter uppercase">03. 가면 뒤의 진실</h4>
+                        <p class="text-white/60 line-loose font-light italic">거짓이 무너지고 지독한 진짜를 마주하는 순간.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-44 px-6 bg-zinc-950 relative overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-indigo-900/10 rounded-full blur-[120px]"></div>
+        <div class="max-w-4xl mx-auto relative z-10">
+            <div class="mb-20 text-center" data-aos="fade-up"><h2 class="text-4xl font-black text-white tracking-tighter uppercase mb-4">The Whispers</h2></div>
+            <div class="space-y-16">
+                <div class="quote-card" data-aos="fade-right">
+                    <p class="text-2xl md:text-3xl font-bold italic text-white mb-4 tracking-tight">"준비가 늦어서 미안해요... 누나, 화났어요?"</p>
+                    <p class="text-indigo-400 font-bold text-sm tracking-widest uppercase">— 지오, 8697 연애방</p>
+                </div>
+                <div class="quote-card text-right" style="border-left:0; border-right:2px solid var(--main-indigo); padding-right:24px;" data-aos="fade-left">
+                    <p class="text-2xl md:text-3xl font-bold italic text-white mb-4 tracking-tight">"혼나, 직접 만나야 안다니까?"</p>
+                    <p class="text-indigo-400 font-bold text-sm tracking-widest uppercase">— 세아, 접속의 시작</p>
+                </div>
+                <div class="quote-card" data-aos="fade-right">
+                    <p class="text-2xl md:text-3xl font-bold italic text-white mb-4 tracking-tight">"에잇. 그 한마디가 내 세계를 뒤집어 놓았다."</p>
+                    <p class="text-indigo-400 font-bold text-sm tracking-widest uppercase">— 지오의 독백</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="archive-read" class="py-44 px-6 bg-black text-center">
+        <div class="max-w-4xl mx-auto" data-aos="fade-up">
+            <h2 class="text-4xl md:text-6xl font-black mb-20 text-white italic uppercase tracking-tighter">Archive List</h2>
+            <div id="episode-list-container"><!-- EPISODE_LIST_START -->
+<div style="display: flex; flex-direction: column; gap: 1rem; max-width: 600px; margin: 0 auto; text-align: left;">
+  <a href="episodes/00_prologue.html" class="ep-link block p-8 glass rounded-3xl border border-white/5 transition-all text-xl" style="text-decoration: none; color: white;">프롤로그 <span style="float: right; opacity: 0.3;">→</span></a>
+  <a href="episodes/01_ep01.html" class="ep-link block p-8 glass rounded-3xl border border-white/5 transition-all text-xl" style="text-decoration: none; color: white;">1화. 오픈채팅 69방 <span style="float: right; opacity: 0.3;">→</span></a>
+  <a href="episodes/02_ep02.html" class="ep-link block p-8 glass rounded-3xl border border-white/5 transition-all text-xl" style="text-decoration: none; color: white;">2화. 엎드려 <span style="float: right; opacity: 0.3;">→</span></a>
+  <a href="episodes/03_ep03.html" class="ep-link block p-8 glass rounded-3xl border border-white/5 transition-all text-xl" style="text-decoration: none; color: white;">3화. 스타킹 찢어? <span style="float: right; opacity: 0.3;">→</span></a>
+  <a href="episodes/04_ep04.html" class="ep-link block p-8 glass rounded-3xl border border-white/5 transition-all text-xl" style="text-decoration: none; color: white;">4화. 젖었어 <span style="float: right; opacity: 0.3;">→</span></a>
+  <a href="episodes/05_ep05.html" class="ep-link block p-8 glass rounded-3xl border border-white/5 transition-all text-xl" style="text-decoration: none; color: white;">5화. 면도는 하고 왔니? <span style="float: right; opacity: 0.3;">→</span></a>
+  <a href="episodes/06_ep06.html" class="ep-link block p-8 glass rounded-3xl border border-white/5 transition-all text-xl" style="text-decoration: none; color: white;">6화. 젖지오 <span style="float: right; opacity: 0.3;">→</span></a>
+  <a href="episodes/07_ep07.html" class="ep-link block p-8 glass rounded-3xl border border-white/5 transition-all text-xl" style="text-decoration: none; color: white;">7화. 아메리카노 한 잔 <span style="float: right; opacity: 0.3;">→</span></a>
+  <a href="episodes/08_ep08.html" class="ep-link block p-8 glass rounded-3xl border border-white/5 transition-all text-xl" style="text-decoration: none; color: white;">8화. 치핸냐? <span style="float: right; opacity: 0.3;">→</span></a>
+  <a href="episodes/09_ep09.html" class="ep-link block p-8 glass rounded-3xl border border-white/5 transition-all text-xl" style="text-decoration: none; color: white;">9화. 공개고백 <span style="float: right; opacity: 0.3;">→</span></a>
+  <a href="episodes/10_ep10.html" class="ep-link block p-8 glass rounded-3xl border border-white/5 transition-all text-xl" style="text-decoration: none; color: white;">10화. 우리 오래 걸렸다 <span style="float: right; opacity: 0.3;">→</span></a>
+  <a href="episodes/11_ep11.html" class="ep-link block p-8 glass rounded-3xl border border-white/5 transition-all text-xl" style="text-decoration: none; color: white;">11화. 세아의 삶 <span style="float: right; opacity: 0.3;">→</span></a>
+  <a href="episodes/12_ep12.html" class="ep-link block p-8 glass rounded-3xl border border-white/5 transition-all text-xl" style="text-decoration: none; color: white;">12화. 첫 데이트 <span style="float: right; opacity: 0.3;">→</span></a>
+  <a href="episodes/13_ep13.html" class="ep-link block p-8 glass rounded-3xl border border-white/5 transition-all text-xl" style="text-decoration: none; color: white;">13화. 까줄까? <span style="float: right; opacity: 0.3;">→</span></a>
+  <a href="episodes/14_ep14.html" class="ep-link block p-8 glass rounded-3xl border border-white/5 transition-all text-xl" style="text-decoration: none; color: white;">14화. 식빵 <span style="float: right; opacity: 0.3;">→</span></a>
+  <a href="episodes/15_ep15.html" class="ep-link block p-8 glass rounded-3xl border border-white/5 transition-all text-xl" style="text-decoration: none; color: white;">15화. 인스파이어 <span style="float: right; opacity: 0.3;">→</span></a>
+  <a href="episodes/16_ep16.html" class="ep-link block p-8 glass rounded-3xl border border-white/5 transition-all text-xl" style="text-decoration: none; color: white;">16화. 식탁 <span style="float: right; opacity: 0.3;">→</span></a>
+  <a href="episodes/17_ep17.html" class="ep-link block p-8 glass rounded-3xl border border-white/5 transition-all text-xl" style="text-decoration: none; color: white;">17화. 잘 만나고 와요 <span style="float: right; opacity: 0.3;">→</span></a>
+  <a href="episodes/18_ep18.html" class="ep-link block p-8 glass rounded-3xl border border-white/5 transition-all text-xl" style="text-decoration: none; color: white;">18화. 낮선 천장 <span style="float: right; opacity: 0.3;">→</span></a>
+  <a href="episodes/19_ep19.html" class="ep-link block p-8 glass rounded-3xl border border-white/5 transition-all text-xl" style="text-decoration: none; color: white;">19화. 바늘 가는 데 실 안 가요? <span style="float: right; opacity: 0.3;">→</span></a>
+  <a href="episodes/20_ep20.html" class="ep-link block p-8 glass rounded-3xl border border-white/5 transition-all text-xl" style="text-decoration: none; color: white;">20화. 밥이나 사주면 돼요 <span style="float: right; opacity: 0.3;">→</span></a>
+  <a href="episodes/21_ep21.html" class="ep-link block p-8 glass rounded-3xl border border-white/5 transition-all text-xl" style="text-decoration: none; color: white;">21화. 어 <span style="float: right; opacity: 0.3;">→</span></a>
+  <a href="episodes/22_ep22.html" class="ep-link block p-8 glass rounded-3xl border border-white/5 transition-all text-xl" style="text-decoration: none; color: white;">22화. 신논현 <span style="float: right; opacity: 0.3;">→</span></a>
+  <a href="episodes/23_ep23.html" class="ep-link block p-8 glass rounded-3xl border border-white/5 transition-all text-xl" style="text-decoration: none; color: white;">23화. 새우는 결국 ① <span style="float: right; opacity: 0.3;">→</span></a>
+</div>
+<!-- EPISODE_LIST_END --></div>
+        </div>
+    </section>
+
+    <footer id="hub" class="py-44 bg-zinc-950 text-center border-t border-zinc-900 px-6 relative">
+        <div class="max-w-2xl mx-auto" data-aos="fade-up">
+            <h2 class="text-6xl font-black mb-10 tracking-tighter text-white uppercase italic">Dolan Hub</h2>
+            <div class="mb-16"><a href="#archive-read" class="inline-block border-2 border-indigo-600 text-indigo-400 px-10 py-4 rounded-full font-black text-lg hover:bg-indigo-600 hover:text-white transition-all uppercase tracking-widest shadow-xl">Enter the Archive</a></div>
+            <div class="flex flex-wrap justify-center gap-4 mb-20">
+                <button onclick="share('kakao')" class="share-icon-btn glass rounded-2xl"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/KakaoTalk_logo.svg" class="w-6 h-6"></button>
+                <button onclick="share('facebook')" class="share-icon-btn glass rounded-2xl"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg" class="w-6 h-6"></button>
+                <button onclick="share('telegram')" class="share-icon-btn glass rounded-2xl"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" class="w-6 h-6"></button>
+                <button onclick="share('twitter')" class="share-icon-btn glass rounded-2xl"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/X_logo_2023.svg" class="w-6 h-6 invert"></button>
+                <button onclick="copyLink()" class="share-icon-btn glass rounded-2xl"><svg class="w-6 h-6 stroke-white fill-none" viewBox="0 0 24 24" stroke-width="2"><path d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg></button>
+            </div>
+            <p class="text-slate-400 text-xs font-bold tracking-widest uppercase opacity-80">© 2026 Dolan Hub. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 10l7-7m0 0l7 7m-7-7v18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        const btt = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => { if (window.pageYOffset > 500) btt.classList.add('show'); else btt.classList.remove('show'); });
+        function share(platform) {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent("작가 돌안 공식 아카이브 | 오픈채팅의 은밀한 속삭임");
+            let shareUrl = "";
+            switch(platform) {
+                case 'twitter': shareUrl = `https://twitter.com/intent/tweet?text=${text}&url=${url}`; break;
+                case 'telegram': shareUrl = `https://t.me/share/url?url=${url}&text=${text}`; break;
+                case 'facebook': shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`; break;
+            }
+            if(shareUrl) window.open(shareUrl);
+        }
+        function copyLink() { navigator.clipboard.writeText(window.location.href).then(() => alert('아카이브 링크가 복사되었습니다.')); }
+    </script>
+</body>
+</html>
